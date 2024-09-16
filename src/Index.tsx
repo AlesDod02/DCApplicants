@@ -1,26 +1,18 @@
-import { useState } from 'react'
-import { ReactDOM } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import './pages/HomeCandidato'
-import './pages/HomeHr'
-import './App.tsx'
-import App from './App.tsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App';
+import HomeCandidato from './pages/HomeCandidato';
+import HomeHr from './pages/HomeHr';
 
-export default function Index() {
-  
+const Index: React.FC = () => {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path='/' element= {<App />}>
-            <Route path='HomeCandidato' element= {<HomeC />}></Route>
-            
-        </Route>
+        <Route path="/" element={<App />} />
+        <Route path="/HomeCandidato" element={<HomeCandidato />} />
+        <Route path="/HomeHr" element={<HomeHr />} />
       </Routes>
-      </BrowserRouter>
-    </>
+    </BrowserRouter>
   );
-  
-}
+};
 
-
+export default Index;

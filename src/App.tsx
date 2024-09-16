@@ -1,22 +1,16 @@
-import { useState } from 'react'
-import { ReactDOM } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import './pages/HomeCandidato'
-import './pages/HomeHr'
-import './App.css'
+import { useNavigate } from 'react-router-dom';
+import './App.css';
 
-function App() {
-  
+const App: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <>
-      
-      <div>
-        <button >Candidato</button>
-        <button>HR</button>
-      </div>
-      
-    </>
-  )
-}
+    <div>
+      <button onClick={() => navigate('/HomeCandidato')}>Candidato</button>
+      <button onClick={() => navigate('/HomeHr')}>HR</button>
+    </div>
+  );
+};
 
-export default App
+export default App;
+
