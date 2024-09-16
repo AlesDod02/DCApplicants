@@ -93,7 +93,7 @@ const HomeCandidato: React.ComponentType = () => {
                                 <option value="conoscenti">Conoscenti</option>
                             </select>
                         </div>
-                        <button>Proseguio</button>
+                        <button>Prosegui</button>
                     </form>
                 </div>
             </div>
